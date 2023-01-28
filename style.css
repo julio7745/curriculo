@@ -70,6 +70,7 @@ main a{
 #qualificacoes p{
     margin-top: 15px;
     text-align: justify;
+    max-width: 800px;
 } 
 #qualificacoes p a{
     color: var(--cor0);

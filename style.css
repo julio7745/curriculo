@@ -2,7 +2,7 @@
 :root{
     --cor0: rgb(21, 34, 65);
     --cor1: rgba(21, 34, 65, 0.5);
-    --cor2: rgba(103, 136, 221, 0.425);
+    --cor2: rgba(147, 175, 247, 0.288);
 }
 *{
     margin: 0;
@@ -47,7 +47,7 @@ main h1{
     font-size: 1.4em;
     color: var(--cor0);
     margin: 15px 0px 10px 15px;
-    text-shadow: 1px 1px 2px var(--cor2);
+    text-shadow: 1px 1px 2px var(--cor1);
 }
 main h2{
     font-size: 1.1em;

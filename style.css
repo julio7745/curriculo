@@ -136,6 +136,9 @@ abbr{
 #workshops ul{
     padding-left: 55px;
 }
+aside{
+    display: none;
+}
 footer{
     margin-top: 20px;
     width: 100%;
@@ -199,6 +202,10 @@ footer{
     }
     #portifolio, #cursos, #workshops, footer{
         display: none;
+    }
+    aside{
+        display: block;
+        padding-left: 25px;
     }
 
 }

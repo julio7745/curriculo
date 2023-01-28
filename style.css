@@ -71,6 +71,10 @@ main a{
     margin-top: 15px;
     text-align: justify;
 } 
+#qualificacoes p a{
+    color: var(--cor0);
+    font-weight: bold;
+}
 .graduacao{
     margin: 0px 15px 15px 15px;
     border: 1px solid var(--cor1);
@@ -90,23 +94,16 @@ h2 span, h3 span{
     display: none;
 }
 #formacao table{
-    width: calc(100% -40px);
-    max-width: 550px;
     margin: 15px 20px;
     border-collapse: collapse;
-}
-#formacao tbody{
-    max-width: 100%;
-}
-#formacao tr{
-    width: 100%;
+    font-size: .8em;
 }
 #formacao td{
-    width: 100%;
     padding: 5px;
+    width: auto;
 }
 #formacao .c2{
-    min-width: 150px;
+    min-width: 80px;
     text-align: right;
 }
 #formacao tr:nth-child(2n-1){
@@ -148,6 +145,14 @@ footer{
     background-color: var(--cor0);
     padding: 40px 0px;
 }
+@media screen and (min-width: 300px) {
+    #formacao table{
+        font-size: .9em;
+    }
+    #formacao .c2{
+        min-width: 100px;
+    }
+}
 @media screen and (min-width: 520px) {
     header{
         padding: 40px;
@@ -157,6 +162,12 @@ footer{
     }
     main{
         padding: 10px 25px;
+    }
+    #formacao table{
+        font-size: 1em;
+    }
+    #formacao .c2{
+        min-width: 150px;
     }
 }
 @media print{

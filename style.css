@@ -173,7 +173,7 @@ footer{
 }
 @media print{
     @page{
-        margin: 1cm;
+        margin: 1.5cm 1cm;
         margin-top: calc(1cm + 20px);
     }
     header{
@@ -194,6 +194,7 @@ footer{
         margin: 0cm;
         padding: 0cm;
         height: auto;
+        font-size: 1.3em;
     }
     header nav{
         display: none;
@@ -221,6 +222,10 @@ footer{
     aside{
         display: block;
         padding-left: 25px;
+    }
+    aside a{
+        color: black;
+        text-decoration: none;
     }
 
 }

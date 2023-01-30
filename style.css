@@ -172,9 +172,15 @@ footer{
     }
 }
 @media print{
+    *{
+        font-family: 'Times New Roman', Times, serif;
+    }  
     @page{
         margin: 1.5cm 1cm;
         margin-top: calc(1cm + 20px);
+    }
+    p, li, #formacao table{
+        font-size: 1.1em;
     }
     header{
         width: 100%;
@@ -216,17 +222,17 @@ footer{
     #formacao .exp{
         display: block;
     }
-    #portifolio, #cursos, #workshops, footer{
+    #portifolio, #workshops, footer{
         display: none;
     }
     aside{
         display: block;
-        padding-left: 25px;
+        padding: 10px 0px 0px 25px;
+        font-family: 1em;
     }
-    aside a{
+    #cursos a, aside a{
         color: black;
         text-decoration: none;
     }
-
 }
 

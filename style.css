@@ -67,6 +67,19 @@ main a{
     border: 1px solid var(--cor0);
     margin: 25px 0px;
 }
+#pessoais{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+}
+#pessoais h1{
+    display: block;
+    width: 100%;
+}
+#pessoais div{
+    width: 280px;
+    padding-right: 25px;
+}
 #qualificacoes p{
     margin-top: 15px;
     text-align: justify;
@@ -111,7 +124,7 @@ h2 span, h3 span{
     background-color: var(--cor2);
 }
 ul{
-    list-style-position: outside;
+    list-style-position: inside;
     padding-left: 15px;
 }
 ul li{
@@ -120,6 +133,15 @@ ul li{
 abbr{
     text-decoration: none;
     margin: 0px;
+}
+#habilidades ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+}
+#habilidades li{
+    width: 280px;
+    padding-right: 25px;
 }
 #portifolio a, #cursos a, #workshops a{
     color: var(--cor0);

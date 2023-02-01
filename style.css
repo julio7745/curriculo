@@ -196,13 +196,14 @@ footer{
 @media print{
     *{
         font-family: 'Times New Roman', Times, serif;
+        margin: 0;
     }  
     @page{
-        margin: 1.5cm 1cm;
-        margin-top: calc(1cm + 20px);
+        margin: 1cm;
+        margin-top: calc(1cm + 15px);
     }
     p, li, #formacao table{
-        font-size: 1.1em;
+        font-size: 1em;
     }
     header{
         width: 100%;
@@ -222,7 +223,7 @@ footer{
         margin: 0cm;
         padding: 0cm;
         height: auto;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     header nav{
         display: none;
@@ -230,7 +231,7 @@ footer{
     }
     main h1{
         text-shadow: none;
-        margin-top: 1.5cm;
+        margin-top: 1cm;
     }
     .divisao{
         display: none;
@@ -243,6 +244,13 @@ footer{
     }
     #formacao .exp{
         display: block;
+    }
+    #formacao table{
+        padding-left: 0px;
+        margin-left: 15px;
+    }
+    #formacao td{
+        padding-left: 0px;
     }
     #portifolio, #workshops, footer{
         display: none;
@@ -257,4 +265,8 @@ footer{
         text-decoration: none;
     }
 }
-
+@media print and (orientation: portrait){
+    #formacao{
+        margin-top: 130px;
+    }
+}

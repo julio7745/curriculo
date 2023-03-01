@@ -351,8 +351,4 @@ footer{
         text-decoration: none;
     }
 }
-@media print and (orientation: portrait){
-    #formacao{
-        margin-top: 130px;
-    }
-}
+

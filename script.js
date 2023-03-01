@@ -46,5 +46,12 @@ function fechatodos(aux1){
             less2[aux2].style.display = 'none'
         }
     }
-    
+}
+
+function carregaData() {
+    const data = new Date()
+    const format = (n) => n > 9 ? n : `0${n}`
+
+    const p = document.querySelector('aside p')
+    p.innerHTML += `${format(data.getDate())}/${format(data.getMonth()+1)}/${format(data.getFullYear())}`
 }

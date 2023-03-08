@@ -325,6 +325,13 @@ footer{
     .material-icons{
         display: none;
     }
+    .experiencia{
+        display: inline-block;
+        margin: 0px;
+    }
+    .experiencia::after, .experiencia::before{
+        display: none;
+    }
     #formacao h1{
         margin-top: 1cm;
     }

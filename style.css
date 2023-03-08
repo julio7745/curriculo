@@ -275,6 +275,9 @@ footer{
         height: 0;
         width: 50%;
     }
+    #experiencia h1{
+        margin-bottom: 30px;
+    }
     .experiencia div{
         margin-right: 25px;
     }

@@ -49,10 +49,13 @@ main h1{
     margin: 15px 0px 10px 15px;
     text-shadow: 1px 1px 2px var(--cor1);
 }
-main h2{
+main h2, #workshops > section > a{
+    display: block;
     font-size: 1.1em;
     color: var(--cor0);
     margin: 20px 0px 0px 15px;
+    font-size: 17.6px;
+    font-weight: 700;
 }
 main p, main address, main ul{
     margin: 5px 0px 10px 15px;
@@ -191,7 +194,7 @@ abbr{
     color: var(--cor0);
     text-decoration: underline;
 }
-#workshops h2{
+#workshops h2, #workshops > section > a{
     cursor: pointer;
     margin-top: 15px;
 }

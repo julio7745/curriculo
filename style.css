@@ -315,6 +315,7 @@ footer{
     }
     header section h1{
         margin: 0cm;
+	margin-bottom: .5cm;
         padding: 0cm;
         height: auto;
         font-size: 1.2em;
@@ -323,15 +324,19 @@ footer{
         display: none;
         overflow: hidden;
     }
-    main h1{
+    main h1, main h2{
         text-shadow: none;
-        margin-top: 1cm;
+	margin-botton: .5cm;
+        margin-top: .5cm;
     }
     .divisao{
         display: none;
     }
     .material-icons{
         display: none;
+    }
+    #pessoais h2{
+	margin-top: 0px;
     }
     .experiencia{
         display: inline-block;
@@ -345,7 +350,7 @@ footer{
         display: block;
     }
     #formacao h1{
-        margin-top: 1cm;
+        margin-top: .5cm;
     }
     #formacao .exp{
         display: block;
@@ -364,6 +369,9 @@ footer{
         display: block;
         padding: 10px 0px 0px 25px;
         font-family: 1em;
+    }
+    #Idiomas{
+	display: none;
     }
     #cursos a, aside a{
         color: black;

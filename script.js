@@ -55,3 +55,29 @@ function carregaData() {
     p.innerHTML += `${format(data.getDate())}/${format(data.getMonth()+1)}/${format(data.getFullYear())}`
     
 }
+
+window.addEventListener('beforeprint', () => {
+    
+    apagaBotoes()
+    mostraFormacoes()
+
+    function mostraFormacoes() {
+        const formacoes = document.querySelectorAll(".formacao");
+        for (let i = 0; i < formacoes.length; i++) {
+            formacoes[i].style.display = "block";
+        }
+    }
+
+    function apagaBotoes() {
+        const iconMore = document.querySelectorAll(".more");
+        const iconLess = document.querySelectorAll(".less");
+        for (let i = 0; i < iconMore.length; i++) {
+            iconMore[i].style.display = "none";
+            iconLess[i].style.display = "none";
+        }
+    }
+});
+
+window.addEventListener('afterprint', () => {
+    location.reload();
+});

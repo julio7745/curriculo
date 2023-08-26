@@ -54,7 +54,9 @@ main h2, #workshops > section > a{
     font-size: 1.1em;
     color: var(--cor0);
     margin: 20px 0px 0px 15px;
-    font-size: 17.6px;
+    font-size: 17.6px;   
+}
+main h2{
     font-weight: 700;
 }
 main p, main address, main ul{
@@ -98,6 +100,15 @@ main a{
     padding: 15px 0px 15px 30px;
     width: 250px;
 }
+.experiencia::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-left: 2px dashed var(--cor1);
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
 .experiencia::before{
     content: '';
     position: absolute;
@@ -108,14 +119,6 @@ main a{
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.experiencia::after{
-    content: '';
-    position: absolute;
-    height: 100%;
-    border-left: 2px dashed var(--cor1);
-    top: 0;
-    transform: translateX(-50%);
-}
 #experiencia .first::after{
     top: 50%;
     height: 50%;
@@ -123,6 +126,9 @@ main a{
 #experiencia .last::after{
     bottom: 50%;
     height: 50%;
+}
+#experiencia .fistAndLast::after{
+    display: none;
 }
 .experiencia div{
     display: block;
@@ -145,13 +151,13 @@ h2 span, h3 span{
     transform: scale(1.3);
     transform: translate(5px, 5px);
 }
-.less, .less2{
+.less{
     display: none;
 }
 #formacao h2{
     cursor: pointer;
 }
-.exp, .exp2{
+.exp{
     display: none;
 }
 #formacao table{

@@ -1,57 +1,57 @@
-var conteudo = window.document.getElementsByClassName('exp')  
-var more = window.document.getElementsByClassName('more')
-var less = window.document.getElementsByClassName('less')
-function expancao(aux){
-    if(conteudo[aux].style.display == 'none'){
-        fechatodos(0);
-        fechatodos(1);
-        conteudo[aux].style.display = 'block'
-        more[aux].style.display = 'none'
-        less[aux].style.display = 'inline-block'
-    }else{
-        conteudo[aux].style.display = 'none'
-        more[aux].style.display = 'inline-block'
-        less[aux].style.display = 'none'
-    }
+
+const expansivosBotton = document.querySelectorAll(".expBotton")
+for (let i = 0; i < expansivosBotton.length; i++) {
+    expansivosBotton[i].addEventListener("click", expande);
 }
 
-var conteudo2 = window.document.getElementsByClassName('exp2')  
-var more2 = window.document.getElementsByClassName('more2')
-var less2 = window.document.getElementsByClassName('less2')
-function expancao2(aux){
-    if(conteudo2[aux].style.display == 'none'){
-        fechatodos(1)
-        conteudo2[aux].style.display = 'block'
-        more2[aux].style.display = 'none'
-        less2[aux].style.display = 'inline-block'
-    }else{
-        conteudo2[aux].style.display = 'none'
-        more2[aux].style.display = 'inline-block'
-        less2[aux].style.display = 'none'
+function expande(e) {
+
+    let alvo = e.target
+    const alvoname= e.target.tagName.toLowerCase();
+
+    if (alvoname == "span" || alvoname == "abbr") {
+        alvo = e.target.parentNode;  
     }
-}
 
+    const pai = alvo.parentNode;
 
-function fechatodos(aux1){
-    if (aux1 == 0){
-        for(var aux2 = 0; aux2 < conteudo.length; aux2++ ){
-            conteudo[aux2].style.display = 'none';
-            more[aux2].style.display = 'inline-block'
-            less[aux2].style.display = 'none'
+    const filhosDiretos = pai.children;
+    const filhosDiretosExpansivos = Array.from(filhosDiretos).filter(elemento => elemento.classList.contains("exp"));
+
+    const iconMore = pai.querySelectorAll(".more");
+    const iconLess = pai.querySelectorAll(".less");
+
+    if (filhosDiretosExpansivos[0].style.display == "block") {
+        
+        const filhosExpansivos = pai.querySelectorAll(".exp");
+        
+        for (let i = 0; i < iconMore.length; i++) {
+            iconMore[i].style.display = "inline-block";
+            iconLess[i].style.display = "none";
         }
-    }else if (aux1 == 1){
-        for(var aux2 = 0; aux2 < conteudo2.length; aux2++ ){
-            conteudo2[aux2].style.display = 'none';
-            more2[aux2].style.display = 'inline-block'
-            less2[aux2].style.display = 'none'
+        for (let i = 0; i < filhosExpansivos.length; i++) {
+            filhosExpansivos[i].style.display = "none";
+        }
+
+    } else {
+        
+        iconMore[0].style.display = "none";
+        iconLess[0].style.display = "inline-block";
+
+        for (let i = 0; i < filhosDiretosExpansivos.length; i++) {
+            filhosDiretosExpansivos[i].style.display = "block";
         }
     }
 }
+
+
 
 function carregaData() {
+
     const data = new Date()
     const format = (n) => n > 9 ? n : `0${n}`
 
-    const p = document.querySelector('aside p')
+    const p = document.querySelector("aside p")
     p.innerHTML += `${format(data.getDate())}/${format(data.getMonth()+1)}/${format(data.getFullYear())}`
+    
 }
